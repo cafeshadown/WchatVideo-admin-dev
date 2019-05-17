@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.video.admincommon.AdminCommonApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.422 s <<< FAILURE! - in com.video.admincommon.AdminCommonApplicationTests
+initializationError(com.video.admincommon.AdminCommonApplicationTests)  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+

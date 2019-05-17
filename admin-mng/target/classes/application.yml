@@ -1,0 +1,39 @@
+mapper:
+  mappers:
+  - com.video.utils.MyMapper
+  not-empty: true
+  style: camelhumpandlowercase
+  wrap-keyword: '{0}'
+  check-example-entity-class: true
+  identity: MYSQL
+server:
+  port: 8080
+  servlet:
+    context-path: /admin
+logging:
+  level:
+    com.kuaishou.is.recruit.domain.mapper: debug
+    org.apache.kafka.clients.NetworkClient: error
+    kafka.consumer.ZookeeperConsumerConnector: error
+  file: '/log/admin-video.log'
+spring:
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 2s
+    jedis:
+      pool:
+        max-idle: 500
+        min-idle: 50
+        max-wait:  -1s
+        max-active: -1
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/video_dev?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowMultiQueries=true
+      username: root
+      password: 123456
